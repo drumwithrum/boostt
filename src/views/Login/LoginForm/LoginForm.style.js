@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import { Button } from '../../../components';
+import { Button, Typography as TypographyBase } from '../../../components';
+import colors from '../../../config/colors';
 
 export const Wrapper = styled('div')`
   width: 100%;
 `;
 
-export const Typography = styled('div')`
-  font-family: Montserrat;
-  color: #FCFCFC;
+export const Typography = styled(TypographyBase)`
+  color: ${colors.appBar};
   font-weight: 300;
-  font-style: normal;
+  text-transform: none;
 `
 
 export const Title = styled(Typography)`

@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Typography as TypographyBase } from '../../../../components';
+import colors from '../../../../config/colors';
 
 export const Wrapper = styled('div')`
   height: 100%;
@@ -9,13 +11,11 @@ export const Icon = styled('img')`
   margin-right: 12px;
 `;
 
-export const Typography = styled('div')`
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
+export const Typography = styled(TypographyBase)`
+  text-transform: none;
   font-size: 12px;
   line-height: 15px;
-  color: #FF473A;
+  color: ${colors.main};
 `
 
 export const TextWrapper = styled('div')`

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../config/colors'
 
 export const Wrapper = styled('div')`
   width: 100%;
@@ -14,7 +15,7 @@ export const StepperItem = styled('div')`
   height: 6px;
   border-radius: 100px;
   transition: all .225s;
-  background-color: ${p => p.active ? '#FF473A' : '#DADADA'};
+  background-color: ${p => p.active ? colors.main : colors.stepperDisabled};
   &:not(:last-child) {
     margin-right: 2px;
   }

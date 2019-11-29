@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ExpandPanel as ExpandPanelBase, Button as ButtonBase } from '../../../components';
+import { ExpandPanel as ExpandPanelBase, Button as ButtonBase, Typography } from '../../../components';
 import colors from '../../../config/colors';
 
 export const Wrapper = styled('div')`
@@ -11,13 +11,11 @@ export const Wrapper = styled('div')`
   }
 `;
 
-export const Title = styled('div')`
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
+export const Title = styled(Typography)`
+  text-transform: none;
   font-size: 24px;
   line-height: 29px;
-  color: #000000;
+  color: ${colors.black};
   margin-bottom: 20px;
 `;
 
@@ -32,37 +30,32 @@ export const Button = styled(ButtonBase)`
   width: 248px;
 `
 export const Description = styled('div')`
-  font-family: Montserrat;
-  font-style: normal;
+  text-transform: none;
   font-weight: 300;
   font-size: 10px;
   line-height: 15px;
-  color: #979797;
+  color: ${colors.hint};
   height: 100%;
 `
 export const PriceWrapper = styled('div')`
   display: flex;
   flex-direction: column;
 `
-export const PriceTitle = styled('div')`
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
+export const PriceTitle = styled(Typography)`
+  text-transform: none;
   font-size: 14px;
   line-height: 21px;
   display: flex;
   align-items: center;
-  color: #050505;
+  color: ${colors.tabTitle};
 `
-export const PriceSubtitle = styled('div')`
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
+export const PriceSubtitle = styled(Typography)`
+  text-transform: none;
   font-size: 12px;
   line-height: 17px;
   display: flex;
   align-items: center;
-  color: #D4D4D4;
+  color: ${colors.disabled};
 `
 export const ExpandIcon = styled('img')`
   position: absolute;

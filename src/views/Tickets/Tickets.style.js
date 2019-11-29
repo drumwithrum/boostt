@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { View, Button as BaseButton } from '../../components';
+import { View, Button as BaseButton, Typography } from '../../components';
+import colors from '../../config/colors';
 
 export const Wrapper = styled(View)`
   padding-left: 13px;
@@ -14,15 +15,13 @@ export const Wrapper = styled(View)`
   height: 100%;
 `;
 
-export const Title = styled('div')`
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
+export const Title = styled(Typography)`
+  text-transform: none;;
   font-size: 24px;
   line-height: 29px;
   display: flex;
   align-items: center;
-  color: #000000;
+  color: ${colors.black};
   width: 275px;
 `
 export const TitleWrapper = styled('div')`
@@ -30,15 +29,13 @@ export const TitleWrapper = styled('div')`
   display: flex;
   flex-direction: column;
 `
-export const Subtitle = styled('div')`
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
+export const Subtitle = styled(Typography)`
+  text-transform: none;
   font-size: 12px;
   line-height: 15px;
   display: flex;
   align-items: center;
-  color: #FF473A;
+  color: ${colors.main};
   width: 275px;
   padding: 3px 0px 3px 0px;
   margin-bottom: 12px;

@@ -1,12 +1,13 @@
 import styled from 'styled-components';
+import colors from '../../config/colors';
 import { Grid } from '@material-ui/core';
 
 export const Wrapper = styled(Grid)`
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  padding-top: ${p => p.displaypadding ? '60px' : '0px'};
-  background-color: #FCFCFC;
+  padding-top: ${p => p.active ? '60px' : '0px'};
+  background-color: ${colors.appBar};
 `;
 
 export const Content = styled('main')`

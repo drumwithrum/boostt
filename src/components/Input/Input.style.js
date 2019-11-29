@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../config/colors'
 
 export const Wrapper = styled('div')`
   height: 42px;
@@ -21,11 +22,11 @@ export const InputBase = styled('input')`
   outline: none;
   border: none;
   box-sizing: border-box;
-  color: ${p => p.color || '#000'};
-  background-color: ${p => p.backgroundColor || '#FFF'};
-  border: 2px solid ${p => p.color || '#000'};
+  color: ${p => p.color || colors.black};
+  background-color: ${p => p.backgroundColor || colors.white};
+  border: 2px solid ${p => p.color || colors.black};
   &::placeholder {
-    color: ${p => p.color || '#000'};
+    color: ${p => p.color || colors.black};
   }
 `;
 

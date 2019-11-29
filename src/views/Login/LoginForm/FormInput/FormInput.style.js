@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../../../config/colors';
 
 export const InputBase = styled('input')`
   height: 42px;
@@ -15,7 +16,7 @@ export const InputBase = styled('input')`
   outline: none;
   border: none;
   box-sizing: border-box;
-  color: #000;
+  color: ${colors.black};
   &:not(:last-child) {
     border-bottom: 1px solid black;
   }

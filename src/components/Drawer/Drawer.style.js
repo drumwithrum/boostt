@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Drawer from '@material-ui/core/Drawer';
+import colors from '../../config/colors'
 
 export const DrawerBase = styled(Drawer)`
   & > div {
@@ -11,6 +12,6 @@ export const DrawerBase = styled(Drawer)`
 export const Content = styled('div')`
   width: 310px;
   height: 100%;
-  background-color: #FF473A;
+  background-color: ${colors.main};
   box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
 `

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import colors from '../../../../config/colors'
 import BaseButton from '../../../Button'
 
 const wrapperStyles = `
@@ -11,7 +12,7 @@ const wrapperStyles = `
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
-  color: #FFFFFF;
+  color: ${colors.white};
   box-shadow: none;
 `;
 

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Input as BaseInput } from '../../../components';
+import colors from '../../../config/colors';
 
 export const Input = styled(BaseInput)`
   height: 48px;
@@ -20,8 +21,8 @@ export const Link = styled('a')`
   font-size: 12px;
   line-height: 15px;
   text-decoration-line: underline;
-  color: #FF473A;
+  color: ${colors.main};
   &:visited {
-    color: #FF473A;
+    color: ${colors.main};
   }
 `

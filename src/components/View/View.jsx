@@ -8,7 +8,7 @@ const View = ({ isDrawerOpen: drawerOpen, children, hideAppBar, title, ...props 
   const toggleDrawer = () => setDrawerState(!isDrawerOpen);
   const isOpen = isDrawerOpen || drawerOpen;
   return (
-    <Wrapper displaypadding={!hideAppBar}>
+    <Wrapper active={!hideAppBar}>
       {!hideAppBar && <AppBar onClick={toggleDrawer} isMenuOpen={isDrawerOpen} title={title} />}
       <Drawer open={isOpen} onClose={toggleDrawer} />
       <Content moveContent={isOpen} {...props}>

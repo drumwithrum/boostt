@@ -3,6 +3,7 @@ import { func } from 'prop-types';
 import DrawerMenuItem from './DrawerMenuItem';
 import images from './images';
 import { routes } from '../../../config/router';
+import colors from '../../../config/colors';
 import { Wrapper } from './DrawerMenu.style';
 import { withRouter } from 'react-router';
 
@@ -42,7 +43,7 @@ const DrawerMenu = ({ onItemClick, history, ...props }) => {
           placeholder: 'Search',
           name: 'search',
           value: search,
-          color: '#FFF',
+          color: colors.white,
           backgroundColor: 'transparent',
           onChange: e => setSearchValue(e.target.value),
         }}
