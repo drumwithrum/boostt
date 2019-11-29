@@ -3,6 +3,8 @@ import { date, shape, string, number, arrayOf, func } from 'prop-types';
 import { ExhibitionData } from '../../../components';
 import { getFormattedDate, getHour } from '../../../config/dateManager';
 import ExhibitionDetails from './ExhibitionDetails';
+import { withRouter } from 'react-router';
+import { routes } from '../../../config/router';
 import icons from './images';
 import { Wrapper, Content, Thumbnail, Button, Footer } from './ExhibitionInfo.style';
 
@@ -20,6 +22,7 @@ const ExhibitionInfo = ({
   },
   images,
   openModal,
+  history,
   ...props
 }) => (
   <Wrapper>
@@ -32,7 +35,7 @@ const ExhibitionInfo = ({
         floor={floor}
         onClick={openModal}
       />
-      <Button>Plan Your Visit</Button>
+      <Button onClick={() => history.push(routes.TICKETS.url)}>Plan Your Visit</Button>
       <Footer>
         <ExhibitionDetails icon={icons.pin} title={addressLine1} subtitle={addressLine2} iconStyle={{ marginRight: 5 }}/>
         <ExhibitionDetails icon={icons.clock} title="Open today" subtitle={`${getHour(timeFrom)}—${getHour(timeTo)}`} />
@@ -65,4 +68,4 @@ ExhibitionInfo.propTypes = {
 ExhibitionInfo.defaultProps = {
 }
 
-export default ExhibitionInfo;
+export default withRouter(ExhibitionInfo);

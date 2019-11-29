@@ -1,6 +1,5 @@
 import React from 'react';
 import { func, object, bool } from 'prop-types';
-import { Input } from '../../../';
 import { Wrapper, IconContainer, TextContainer, Button } from './DrawerMenuItem.style';
 
 const DrawerMenuItem = ({
@@ -10,6 +9,7 @@ const DrawerMenuItem = ({
   input,
   header,
   button,
+  children,
   ...props
 }) => {
   const Content = () => (
@@ -18,8 +18,8 @@ const DrawerMenuItem = ({
         <img src={icon} alt={title} />
       </IconContainer>
       <TextContainer header={header}>
-        {Boolean(input)
-          ? <Input {...input} />
+        {Boolean(children)
+          ? children
           : title
         }
       </TextContainer>

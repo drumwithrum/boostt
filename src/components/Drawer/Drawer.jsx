@@ -13,7 +13,6 @@ const Drawer = ({
     variant="persistent"
     anchor="left"
     open={open}
-    // onClose={onClose}
     ModalProps={{
       keepMounted: true, // Better open performance on mobile.
     }}

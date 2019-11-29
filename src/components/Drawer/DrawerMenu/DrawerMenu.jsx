@@ -4,6 +4,7 @@ import DrawerMenuItem from './DrawerMenuItem';
 import images from './images';
 import { routes } from '../../../config/router';
 import colors from '../../../config/colors';
+import Input from '../../Input';
 import { Wrapper } from './DrawerMenu.style';
 import { withRouter } from 'react-router';
 
@@ -39,16 +40,17 @@ const DrawerMenu = ({ onItemClick, history, ...props }) => {
     <Wrapper>
       <DrawerMenuItem
         icon={images.search}
-        input={{
-          placeholder: 'Search',
-          name: 'search',
-          value: search,
-          color: colors.white,
-          backgroundColor: 'transparent',
-          onChange: e => setSearchValue(e.target.value),
-        }}
         header
-      />
+      >
+        <Input
+          placeholder= "Search"
+          name="search"
+          value={search}
+          color={colors.white}
+          backgroundColor="transparent"
+          onChange={e => setSearchValue(e.target.value)}
+        />
+      </DrawerMenuItem>
       {items.map((item, index) => (
         <DrawerMenuItem
           button

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import colors from '../../config/colors';
-import { Typography } from '../../components';
+import Typography from '../Typography';
 
 export const Wrapper = styled('div')`
   display: flex;
