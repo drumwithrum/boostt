@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, HashRouter } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import { ThemeProvider } from 'styled-components';
 import Login from './Login';
@@ -27,9 +27,11 @@ export const Router = (
 class Views extends Component {
   render() {
     return (
-      <MuiThemeProvider theme={theme}>
-        <ThemeProvider theme={theme}>{Router}</ThemeProvider>
-      </MuiThemeProvider>
+      <HashRouter basename="/">
+        <MuiThemeProvider theme={theme}>
+          <ThemeProvider theme={theme}>{Router}</ThemeProvider>
+        </MuiThemeProvider>
+      </HashRouter>
     );
   }
 }
